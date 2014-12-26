@@ -1,5 +1,8 @@
 #! /bin/bash
 TARGET=$1
-SOURCE=$(dirname $0)/../rootfs
-find $SOURCE -name "*~" -exec rm -fv {} \;
-rsync -avz $SOURCE/ $TARGET
+cd $(realpath $(dirname $0))/preimage
+for s in $(ls); do
+	if [[ -z $(echo "$s" | sed "s/.*~//") ]]; then continue; fi
+	echo "=== running $s ==="
+	./$s "$TARGET"
+done

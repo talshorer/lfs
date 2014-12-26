@@ -1,11 +1,9 @@
 #! /bin/bash
 
-cd $1 /dev/null
+SCRIPTS=$(realpath $(dirname $0))
 
-NETIFACE=qemu0
+cd $1 &> /dev/null
 
-#tunctl -t $NETIFACE
-#ifup $NETIFACE
 qemu-system-i386 \
 	-hda rootfs.ext2 \
 	-kernel bzImage \
@@ -13,7 +11,5 @@ qemu-system-i386 \
 	-append "root=/dev/sda console=ttyS0" \
 	-localtime \
 	-serial stdio \
-#	-net nic,vlan=0 \
-#	-net tap,vlan=0,ifname=$NETIFACE
-#ifdown $NETIFACE
-#tunctl -d $NETIFACE
+	-device e1000,netdev=net0 \
+	-netdev tap,id=net0,ifname=qemu0,script=$SCRIPTS/tanifup.sh,downscript=$SCRIPTS/tanifdown.sh

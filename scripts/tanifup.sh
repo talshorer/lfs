@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# keep this script in sync with the guest's /etc/init.d/S01confnet
+
 NETIFACE=$1
 
 ifconfig $NETIFACE 30.0.0.1

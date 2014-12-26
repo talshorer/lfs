@@ -2,7 +2,9 @@
 
 NETIFACE=eth0
 
-ifconfig $NETIFACE 30.0.0.2
-ifconfig $NETIFACE netmask 255.255.255.0
-ifconfig $NETIFACE broadcast 30.0.0.255
-ifconfig $NETIFACE up
+if [[ "$1" == "start" ]]; then
+	ifconfig $NETIFACE 30.0.0.2
+	ifconfig $NETIFACE netmask 255.255.255.0
+	ifconfig $NETIFACE broadcast 30.0.0.255
+	ifconfig $NETIFACE up
+fi

@@ -1,4 +1,5 @@
 #! /bin/bash
+
 TARGET=$1
 cd $(realpath $(dirname $0))/preimage
 for s in $(ls); do

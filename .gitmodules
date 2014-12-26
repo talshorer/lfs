@@ -1,3 +1,6 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = git://git.buildroot.net/buildroot
+[submodule "linux"]
+	path = linux
+	url = https://talshorer@bitbucket.org/talshorer/lfs-linux.git

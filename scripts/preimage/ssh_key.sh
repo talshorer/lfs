@@ -11,3 +11,4 @@ fi
 mkdir -p $TARGET_DIR
 chmod 700 $TARGET_DIR -v
 cp -fv $SSH_KEY_FILE $TARGET_FILE
+chmod 600 $TARGET_DIR/* -v

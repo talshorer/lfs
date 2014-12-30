@@ -1,7 +1,4 @@
 #! /bin/sh
 if [[ "$1" == "start" ]]; then
 	cat /etc/banner
-	echo "Spawning shell"
-	#getty 115200 /dev/console &
-	/bin/sh &>/dev/console </dev/console -l &
 fi

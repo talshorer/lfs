@@ -3,4 +3,4 @@
 	url = git://git.buildroot.net/buildroot
 [submodule "linux"]
 	path = linux
-	url = https://talshorer@bitbucket.org/talshorer/lfs-linux.git
+	url = git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git

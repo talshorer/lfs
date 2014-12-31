@@ -1,4 +1,5 @@
-LFS=$(realpath $(dirname $_))
+LFS=$(realpath $(dirname ${BASH_SOURCE[0]}))
+echo $LFS
 export PATH="$LFS/buildroot/output/host/bin:$LFS/buildroot/output/host/sbin:$LFS/buildroot/output/host/usr/bin:$LFS/buildroot/output/host/usr/sbin:$PATH"
 export HOSTCC="/usr/bin/gcc"
 export HOSTCFLAGS=""

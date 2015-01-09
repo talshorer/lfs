@@ -1,4 +1,0 @@
-#! /bin/sh
-if [[ "$1" == "start" ]]; then
-	mount -t debugfs debugfs /sys/kernel/debug
-fi

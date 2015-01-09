@@ -1,0 +1,7 @@
+#! /bin/sh
+PFS_TYPES="debug security config"
+if [[ "$1" == "start" ]]; then
+	for type in $PFS_TYPES; do
+		mount -t ${type}fs ${type}fs /sys/kernel/$type
+	done
+fi

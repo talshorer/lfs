@@ -1321,7 +1321,8 @@ BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
 #
 # libnftnl needs a toolchain w/ threads, IPv6, largefile
 #
-# BR2_PACKAGE_LIBNL is not set
+BR2_PACKAGE_LIBNL=y
+# BR2_PACKAGE_LIBNL_TOOLS is not set
 # BR2_PACKAGE_LIBOAUTH is not set
 
 #

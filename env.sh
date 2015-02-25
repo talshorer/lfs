@@ -1,9 +1,11 @@
 LFS=$(realpath $(dirname ${BASH_SOURCE[0]}))
-export PATH="$LFS/buildroot/output/host/bin:$LFS/buildroot/output/host/sbin:$LFS/buildroot/output/host/usr/bin:$LFS/buildroot/output/host/usr/sbin:$PATH"
+export HOST_ROOT=$LFS/buildroot/output/host
+export TARGET_ROOT=$LFS/buildroot/output/target
+export PATH="$HOST_ROOT/bin:$HOST_ROOT/sbin:$HOST_ROOT/usr/bin:$HOST_ROOT/usr/sbin:$PATH"
 export HOSTCC="/usr/bin/gcc"
 export HOSTCFLAGS=""
 export ARCH=i386
-export INSTALL_MOD_PATH=$LFS/buildroot/output/target
-export CROSS_COMPILE="$LFS/buildroot/output/host/usr/bin/i686-buildroot-linux-uclibc-"
-export DEPMOD=$LFS/buildroot/output/host/sbin/depmod
+export INSTALL_MOD_PATH=$INSTALL_MOD_PATH
+export CROSS_COMPILE="$HOST_ROOT/usr/bin/i686-buildroot-linux-uclibc-"
+export DEPMOD=$HOST_ROOT/sbin/depmod
 export KERNEL=$LFS/buildroot/output/build/linux-custom

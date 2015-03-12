@@ -10,4 +10,4 @@ export CROSS_COMPILE="$HOST_ROOT/usr/bin/i686-buildroot-linux-uclibc-"
 export DEPMOD=$HOST_ROOT/sbin/depmod
 export KERNEL=$LFS/buildroot/output/build/linux-custom
 pkgconf=$HOST_ROOT/usr/bin/pkg-config
-export TARGET_CFLAGS=$(eval $pkgconf --cflags --libs $(eval $pkgconf --list-all | awk "{print \$1}"))
+export TARGET_CFLAGS=$(eval $pkgconf --cflags --libs-only-L $(eval $pkgconf --list-all | awk "{print \$1}"))

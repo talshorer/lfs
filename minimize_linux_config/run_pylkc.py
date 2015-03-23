@@ -3,7 +3,6 @@
 import sys
 import os
 import collections
-import imp
 
 
 def main(pylkc, rule_func, output):

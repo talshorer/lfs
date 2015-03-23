@@ -9,6 +9,11 @@ if [[ -z "$VLAN" ]]; then
 	echo "missing VLAN. using default $VLAN"
 fi
 
+if [[ -z "$TAP" ]]; then
+	export TAP="qemu0"
+	echo "missing TAP. using default $TAP"
+fi
+
 qemu-system-i386 \
 	-hda rootfs.ext2 \
 	-kernel bzImage \
@@ -17,4 +22,4 @@ qemu-system-i386 \
 	-localtime \
 	-serial stdio \
 	-device e1000,netdev=net0 \
-	-netdev tap,id=net0,ifname=qemu0,script=$SCRIPTS/tanifup.sh,downscript=$SCRIPTS/tanifdown.sh
+	-netdev tap,id=net0,ifname=$TAP,script=$SCRIPTS/tanifup.sh,downscript=$SCRIPTS/tanifdown.sh

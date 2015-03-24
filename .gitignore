@@ -41,3 +41,4 @@ modules.order
 # Editor backups and generated files
 *~
 *.gen.*
+*.old

@@ -1,6 +1,5 @@
 #! /usr/bin/python3
 
-from IPython import start_ipython
 
 def run(pylkc):
     for s in pylkc.all_symbols():

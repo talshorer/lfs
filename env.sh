@@ -1,4 +1,4 @@
-LFS=$(realpath $(dirname ${BASH_SOURCE[0]}))
+export LFS=$(realpath $(dirname ${BASH_SOURCE[0]}))
 export HOST_ROOT=$LFS/buildroot/output/host
 export TARGET_ROOT=$LFS/buildroot/output/target
 export PATH="$PATH:$HOST_ROOT/bin:$HOST_ROOT/sbin:$HOST_ROOT/usr/bin:$HOST_ROOT/usr/sbin"

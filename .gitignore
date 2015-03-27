@@ -28,6 +28,9 @@
 *.x86_64
 *.hex
 
+# Compiled bytecode
+*.pyc
+
 # Compilation extras
 *.cmd
 *.mod
@@ -38,3 +41,4 @@ modules.order
 # Editor backups and generated files
 *~
 *.gen.*
+*.old

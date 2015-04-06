@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.0.0-rc5 Kernel Configuration
+# Linux/x86 4.0.0-rc6 Kernel Configuration
 #
 # CONFIG_64BIT is not set
 CONFIG_X86_32=y
@@ -2013,10 +2013,10 @@ CONFIG_TRACE_IRQFLAGS_SUPPORT=y
 #
 # printk and dmesg options
 #
-# CONFIG_PRINTK_TIME is not set
+CONFIG_PRINTK_TIME=y
 CONFIG_MESSAGE_LOGLEVEL_DEFAULT=4
 # CONFIG_BOOT_PRINTK_DELAY is not set
-# CONFIG_DYNAMIC_DEBUG is not set
+CONFIG_DYNAMIC_DEBUG=y
 
 #
 # Compile-time checks and compiler options

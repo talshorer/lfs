@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2015.05-git-00856-gf4b8e7a Configuration
+# Buildroot 2015.05-git-01024-gadc88b8 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -49,6 +49,8 @@ BR2_x86_pentiumpro=y
 # BR2_x86_nocona is not set
 # BR2_x86_core2 is not set
 # BR2_x86_corei7 is not set
+# BR2_x86_corei7_avx is not set
+# BR2_x86_core_avx2 is not set
 # BR2_x86_atom is not set
 # BR2_x86_k6 is not set
 # BR2_x86_k6_2 is not set
@@ -145,9 +147,11 @@ BR2_TOOLCHAIN_BUILDROOT_VENDOR="buildroot"
 # BR2_KERNEL_HEADERS_3_14 is not set
 # BR2_KERNEL_HEADERS_3_18 is not set
 # BR2_KERNEL_HEADERS_3_19 is not set
+# BR2_KERNEL_HEADERS_4_0 is not set
 BR2_KERNEL_HEADERS_VERSION=y
 BR2_DEFAULT_KERNEL_VERSION="3.19.3"
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_19=y
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_0=y
+# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_19 is not set
 # BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_18 is not set
 # BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_17 is not set
 # BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_16 is not set
@@ -256,14 +260,14 @@ BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_16=y
 BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_17=y
 BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_18=y
 BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_19=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST="3.19"
+BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_0=y
+BR2_TOOLCHAIN_HEADERS_AT_LEAST="4.0"
 
 #
 # System configuration
 #
 BR2_TARGET_GENERIC_HOSTNAME="buildroot"
 BR2_TARGET_GENERIC_ISSUE="Welcome to Buildroot"
-# BR2_TARGET_GENERIC_PASSWD_DES is not set
 BR2_TARGET_GENERIC_PASSWD_MD5=y
 # BR2_TARGET_GENERIC_PASSWD_SHA256 is not set
 # BR2_TARGET_GENERIC_PASSWD_SHA512 is not set
@@ -582,24 +586,16 @@ BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 # BR2_PACKAGE_XFSPROGS is not set
 
 #
-# Games
-#
-# BR2_PACKAGE_GNUCHESS is not set
-# BR2_PACKAGE_LBREAKOUT2 is not set
-# BR2_PACKAGE_LTRIS is not set
-# BR2_PACKAGE_OPENTYRIAN is not set
-# BR2_PACKAGE_PRBOOM is not set
-# BR2_PACKAGE_SL is not set
-
-#
 # Fonts, icons, sounds and themes
 #
 
 #
 # Fonts
 #
+# BR2_PACKAGE_BITSTREAM_VERA is not set
 # BR2_PACKAGE_DEJAVU is not set
 # BR2_PACKAGE_GHOSTSCRIPT_FONTS is not set
+# BR2_PACKAGE_INCONSOLATA is not set
 # BR2_PACKAGE_LIBERATION is not set
 
 #
@@ -616,6 +612,16 @@ BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 #
 # Themes
 #
+
+#
+# Games
+#
+# BR2_PACKAGE_GNUCHESS is not set
+# BR2_PACKAGE_LBREAKOUT2 is not set
+# BR2_PACKAGE_LTRIS is not set
+# BR2_PACKAGE_OPENTYRIAN is not set
+# BR2_PACKAGE_PRBOOM is not set
+# BR2_PACKAGE_SL is not set
 
 #
 # Graphic libraries and applications (graphic/text)
@@ -1166,6 +1172,7 @@ BR2_PACKAGE_OPENSSL=y
 # BR2_PACKAGE_LIBDMTX is not set
 # BR2_PACKAGE_LIBDRM is not set
 # BR2_PACKAGE_LIBEXIF is not set
+# BR2_PACKAGE_LIBFREEIMAGE is not set
 # BR2_PACKAGE_LIBGEOTIFF is not set
 
 #
@@ -1192,7 +1199,6 @@ BR2_PACKAGE_OPENSSL=y
 # BR2_PACKAGE_LIBSVG is not set
 # BR2_PACKAGE_LIBSVG_CAIRO is not set
 # BR2_PACKAGE_LIBSVGTINY is not set
-# BR2_PACKAGE_LIBUNGIF is not set
 # BR2_PACKAGE_LIBVA is not set
 # BR2_PACKAGE_LIBVA_INTEL_DRIVER is not set
 
@@ -2119,7 +2125,7 @@ BR2_PACKAGE_KMOD=y
 #
 
 #
-# openvmtools needs a toolchain w/ wchar, threads, RPC, locale
+# openvmtools needs a toolchain w/ wchar, IPv6, threads, RPC, locale
 #
 # BR2_PACKAGE_POLKIT is not set
 # BR2_PACKAGE_PWGEN is not set
@@ -2220,6 +2226,7 @@ BR2_PACKAGE_HOST_MKE2IMG=y
 #
 # Legacy options removed in 2015.05
 #
+# BR2_TARGET_GENERIC_PASSWD_DES is not set
 # BR2_PACKAGE_GTK2_THEME_HICOLOR is not set
 # BR2_PACKAGE_VALGRIND_PTRCHECK is not set
 

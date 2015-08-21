@@ -3,9 +3,9 @@
 NETIFACE=eth0
 
 if [[ "$1" == "start" ]]; then
-	vlan=$(sed "s/.*vlan=\([^ ]*\).*/\1/" /proc/cmdline)
-	ifconfig $NETIFACE $vlan.2
+	subnet=$(sed "s/.*subnet=\([^ ]*\).*/\1/" /proc/cmdline)
+	ifconfig $NETIFACE $subnet.2
 	ifconfig $NETIFACE netmask 255.255.255.0
-	ifconfig $NETIFACE broadcast $vlan.255
+	ifconfig $NETIFACE broadcast $subnet.255
 	ifconfig $NETIFACE up
 fi

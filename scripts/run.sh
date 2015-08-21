@@ -4,9 +4,9 @@ SCRIPTS=$(realpath $(dirname $0))
 
 cd $1 &> /dev/null
 
-if [[ -z "$VLAN" ]]; then
-	export VLAN="20.0.0"
-	echo "missing VLAN. using default $VLAN"
+if [[ -z "$SUBNET" ]]; then
+	export SUBNET="20.0.0"
+	echo "missing SUBNET. using default $SUBNET"
 fi
 
 if [[ -z "$TAP" ]]; then
@@ -18,7 +18,7 @@ qemu-system-i386 \
 	-hda rootfs.ext2 \
 	-kernel bzImage \
 	-m 512M \
-	-append "root=/dev/sda console=ttyS0 vlan=$VLAN" \
+	-append "root=/dev/sda console=ttyS0 subnet=$SUBNET" \
 	-localtime \
 	-serial stdio \
 	-device e1000,netdev=net0 \

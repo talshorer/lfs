@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2015.08-rc1-00018-g10c07b9 Configuration
+# Buildroot 2015.08-rc2-00029-g2215b8a Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -498,7 +498,7 @@ BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 # BR2_PACKAGE_PV is not set
 
 #
-# racehound needs a toolchain w/ C++, wchar, dynamic library
+# racehound needs a uClibc or (e)glibc toolchain w/ C++, wchar, dynamic library
 #
 # BR2_PACKAGE_RAMSMP is not set
 # BR2_PACKAGE_RAMSPEED is not set
@@ -508,7 +508,7 @@ BR2_PACKAGE_STRACE=y
 # BR2_PACKAGE_STRESS is not set
 
 #
-# sysdig needs a toolchain w/ C++, dynamibc library and a Linux kernel to be built
+# sysdig needs a toolchain w/ C++, dynamic library and a Linux kernel to be built
 #
 # BR2_PACKAGE_SYSPROF is not set
 # BR2_PACKAGE_TINYMEMBENCH is not set
@@ -668,7 +668,7 @@ BR2_PACKAGE_DOSFSTOOLS_MKFS_FAT=y
 # BR2_PACKAGE_LINUX_FUSION is not set
 
 #
-# mesa3d needs a toolchain w/ C++, NPTL
+# mesa3d needs a toolchain w/ C++, NPTL, dynamic library
 #
 
 #
@@ -688,7 +688,7 @@ BR2_PACKAGE_DOSFSTOOLS_MKFS_FAT=y
 BR2_PACKAGE_QT5_JSCORE_AVAILABLE=y
 
 #
-# Qt5 needs a toolchain w/ wchar, NPTL, C++
+# Qt5 needs a toolchain w/ wchar, NPTL, C++, dynamic library
 #
 
 #
@@ -752,6 +752,7 @@ BR2_PACKAGE_PROVIDES_UDEV="eudev"
 BR2_PACKAGE_EUDEV_ENABLE_HWDB=y
 # BR2_PACKAGE_EVEMU is not set
 # BR2_PACKAGE_EVTEST is not set
+# BR2_PACKAGE_FAN_CTRL is not set
 # BR2_PACKAGE_FCONFIG is not set
 # BR2_PACKAGE_FIS is not set
 # BR2_PACKAGE_FLASHROM is not set
@@ -801,7 +802,7 @@ BR2_PACKAGE_EUDEV_ENABLE_HWDB=y
 # BR2_PACKAGE_OFONO is not set
 
 #
-# ola needs a toolchain w/ C++, threads, wchar
+# ola needs a toolchain w/ C++, threads, wchar, dynamic library
 #
 # BR2_PACKAGE_OPEN2300 is not set
 # BR2_PACKAGE_OPENIPMI is not set
@@ -958,7 +959,7 @@ BR2_PACKAGE_PYTHON_IPYTHON=y
 # BR2_PACKAGE_PYTHON_NUMPY is not set
 
 #
-# python-pam needs a toolchain w/ wchar, locale, dynamic library
+# python-pam needs a uClibc or (e)glibc toolchain w/ wchar, locale, dynamic library
 #
 # BR2_PACKAGE_PYTHON_POSIX_IPC is not set
 # BR2_PACKAGE_PYTHON_PROTOBUF is not set
@@ -1245,7 +1246,11 @@ BR2_PACKAGE_OPENSSL=y
 # BR2_PACKAGE_MENU_CACHE is not set
 
 #
-# opencv needs a toolchain w/ C++, NPTL, wchar, dynamic library
+# opencv needs a toolchain w/ C++, NPTL, wchar
+#
+
+#
+# opencv3 needs a toolchain w/ C++, NPTL, wchar, dynamic library
 #
 # BR2_PACKAGE_OPENJPEG is not set
 
@@ -1305,10 +1310,6 @@ BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBPHIDGET is not set
 # BR2_PACKAGE_LIBQMI is not set
 # BR2_PACKAGE_LIBRAW1394 is not set
-
-#
-# librtas needs an (e)glibc toolchain
-#
 # BR2_PACKAGE_LIBRTLSDR is not set
 
 #
@@ -1324,7 +1325,7 @@ BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBUSB is not set
 
 #
-# libv4l needs a toolchain w/ threads, dynamic library, C++ and headers >= 3.0
+# libv4l needs an uClibc or (e)glibc toolchain w/ threads, dynamic library, C++ and headers >= 3.0
 #
 # BR2_PACKAGE_LIBXKBCOMMON is not set
 # BR2_PACKAGE_MTDEV is not set
@@ -1567,7 +1568,7 @@ BR2_PACKAGE_LIBPCAP=y
 # BR2_PACKAGE_USBREDIR is not set
 
 #
-# wvstreams needs a toolchain w/ C++, dynamic library
+# wvstreams needs a (e)glibc or uClibc toolchain w/ C++, dynamic library
 #
 
 #
@@ -1609,7 +1610,7 @@ BR2_PACKAGE_BOOST_ARCH_SUPPORTS=y
 #
 
 #
-# dawgdic needs a toolchain w/ C++
+# dawgdic needs a toolchain w/ C++, gcc >= 4.6
 #
 # BR2_PACKAGE_DING_LIBS is not set
 
@@ -1697,7 +1698,7 @@ BR2_PACKAGE_LIBNSPR_ARCH_SUPPORT=y
 # BR2_PACKAGE_LIGHTNING is not set
 
 #
-# linux-pam needs a toolchain w/ wchar, locale, dynamic library
+# linux-pam needs a uClibc or (e)glibc toolchain w/ wchar, locale, dynamic library
 #
 # BR2_PACKAGE_LTTNG_LIBUST is not set
 # BR2_PACKAGE_MPC is not set
@@ -1716,7 +1717,7 @@ BR2_PACKAGE_LIBNSPR_ARCH_SUPPORT=y
 #
 
 #
-# protobuf needs a toolchain w/ C++, threads
+# protobuf needs a toolchain w/ C++, threads, dynamic library
 #
 
 #
@@ -1913,7 +1914,6 @@ BR2_PACKAGE_QEMU_ARCH_SUPPORTS_TARGET=y
 # BR2_PACKAGE_MODEM_MANAGER is not set
 # BR2_PACKAGE_MONGOOSE is not set
 # BR2_PACKAGE_MONKEY is not set
-# BR2_PACKAGE_MOSH is not set
 # BR2_PACKAGE_MOSQUITTO is not set
 # BR2_PACKAGE_MROUTED is not set
 # BR2_PACKAGE_MTR is not set
@@ -2022,7 +2022,7 @@ BR2_PACKAGE_TCPDUMP=y
 # BR2_PACKAGE_WPA_SUPPLICANT is not set
 
 #
-# wvdial needs a toolchain w/ C++, dynamic library
+# wvdial needs a (e)glibc or uClibc toolchain w/ C++, dynamic library
 #
 # BR2_PACKAGE_XINETD is not set
 # BR2_PACKAGE_XL2TP is not set
@@ -2034,6 +2034,50 @@ BR2_PACKAGE_TCPDUMP=y
 
 #
 # Package managers
+#
+
+#
+# -------------------------------------------------------
+#
+
+#
+# Please note:                                           
+#
+
+#
+# - Buildroot does *not* generate binary packages,       
+#
+
+#
+# - Buildroot does *not* install any package database.   
+#
+
+#
+# *                                                      
+#
+
+#
+# It is up to you to provide those by yourself if you    
+#
+
+#
+# want to use any of those package managers.             
+#
+
+#
+# *                                                      
+#
+
+#
+# See the manual:                                        
+#
+
+#
+# http://buildroot.org/manual.html#faq-no-binary-packages
+#
+
+#
+# -------------------------------------------------------
 #
 # BR2_PACKAGE_IPKG is not set
 # BR2_PACKAGE_OPKG is not set
@@ -2224,10 +2268,6 @@ BR2_PACKAGE_HOST_MKE2IMG=y
 # BR2_PACKAGE_GPU_VIV_BIN_MX6Q is not set
 # BR2_PACKAGE_LIBSEMANAGE_PYTHON_BINDINGS is not set
 # BR2_TARGET_UBOOT_NETWORK is not set
-# BR2_PACKAGE_OPENCV_LIB_CONTRIB is not set
-# BR2_PACKAGE_OPENCV_LIB_GPU is not set
-# BR2_PACKAGE_OPENCV_LIB_LEGACY is not set
-# BR2_PACKAGE_OPENCV_LIB_NONFREE is not set
 
 #
 # Legacy options removed in 2015.05
